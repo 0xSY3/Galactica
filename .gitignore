@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+out/
+data/
+*.json.bak
+.DS_Store
+foundry-deploy/out/
+foundry-deploy/cache/
+foundry-deploy/lib/
+video/out/
+video/node_modules/

@@ -1,0 +1,56 @@
+{
+  "name": "galactica-agent",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Multi-agent autonomous financial network — lending, DeFi, tipping — powered by Tether WDK + OpenClaw",
+  "scripts": {
+    "start": "tsx src/start-all.ts",
+    "demo": "tsx src/demo.ts",
+    "demo:health": "tsx src/demo.ts --health",
+    "engagement": "tsx src/services/sentiment/index.ts",
+    "yield": "tsx src/services/polymarket/index.ts",
+    "defi": "tsx src/services/defi/index.ts",
+    "risk": "tsx src/services/news/index.ts",
+    "credit": "tsx src/services/whale/index.ts",
+    "strategy": "tsx src/agent/index.ts",
+    "typecheck": "tsc --noEmit",
+    "mcp-server": "tsx src/agent/wdk-mcp-server.ts",
+    "web:dev": "cd web && npx vite",
+    "web:build": "cd web && npx vite build"
+  },
+  "keywords": [
+    "tether-wdk",
+    "galactica",
+    "openclaw",
+    "defi",
+    "ai-agents",
+    "lending",
+    "usdt",
+    "xaut",
+    "multi-agent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "@tetherto/wdk": "^1.0.0-beta.6",
+    "@tetherto/wdk-mcp-toolkit": "github:tetherto/wdk-mcp-toolkit",
+    "@tetherto/wdk-protocol-bridge-usdt0-evm": "^1.0.0-beta.3",
+    "@tetherto/wdk-protocol-lending-aave-evm": "^1.0.0-beta.3",
+    "@tetherto/wdk-protocol-swap-velora-evm": "^1.0.0-beta.4",
+    "@tetherto/wdk-wallet-evm": "^1.0.0-beta.10",
+    "compression": "^1.8.1",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "playwright": "^1.58.2",
+    "viem": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
